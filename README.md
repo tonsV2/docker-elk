@@ -1,3 +1,5 @@
+Inspiration: https://medium.com/devoops-and-universe/analyzing-logs-with-elk-easy-way-ea7ea0a4b88d
+
 Add a logging section like the following to docker-compose.yml
   messaging:
     image: rabbitmq:3.6-management-alpine
