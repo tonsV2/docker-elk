@@ -1,3 +1,16 @@
+Add a logging section like the following to docker-compose.yml
+  messaging:
+    image: rabbitmq:3.6-management-alpine
+    container_name: gateway-rabbitmq
+    logging:
+      driver: gelf
+      options:
+        gelf-address: "udp://172.27.0.1:12201"
+        tag: "logger-gateway-messaging"
+#    ports:
+#     - 15672:15672
+
+
 # Docker ELK stack
 
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Elastic Stack version](https://img.shields.io/badge/ELK-5.6.2-blue.svg?style=flat)](https://github.com/deviantony/docker-elk/issues/175)
